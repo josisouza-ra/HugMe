@@ -216,13 +216,13 @@
   .video-note { position:absolute; right: 18px; top: 18px; z-index: 2; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,245,224,0.55); }
 
   /* Stat strip — claro */
-  .stat-strip { margin-top: 68px; border-top: 1px solid var(--color-slate-200); display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat-strip { margin-top: 68px; border-top: 1px solid var(--color-slate-200); display: grid; grid-template-columns: repeat(3, 1fr); }
   .stat-strip .stat { padding: 30px 22px 6px 0; border-right: 1px solid var(--color-slate-200); }
   .stat-strip .stat:last-child { border-right: none; }
   .stat-strip .stat:not(:first-child) { padding-left: 22px; }
   .stat-strip .num { font-size: 40px; font-weight: var(--font-weight-extrabold); line-height: 1; letter-spacing: -0.02em; color: var(--primary-700); }
   .stat-strip .lbl { font-size: 13px; line-height: 1.45; color: var(--color-slate-600); margin-top: 10px; }
-  @media (max-width: 820px) { .stat-strip { grid-template-columns: repeat(2, 1fr); gap: 8px 0; } .stat-strip .stat:nth-child(odd) { border-right: 1px solid var(--color-slate-200); } .stat-strip .stat:nth-child(even) { border-right: none; } }
+  @media (max-width: 820px) { .stat-strip { grid-template-columns: 1fr; gap: 8px 0; } .stat-strip .stat { border-right: none; padding-left: 0; } }
 
   /* Vantagens grid */
   .adv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -342,7 +342,7 @@
         <div>
           <span class="eyebrow-pill"><span class="dot"></span>Novidade HugMe · Descubra com IA</span>
           <h1>Reputação virou inteligência.<br/><em>E inteligência virou vantagem competitiva.</em></h1>
-          <p class="lede">O Descubra com IA é o parceiro estratégico dentro do HugMe que revela onde agir para elevar a percepção da sua empresa — nascido dos dados do próprio Reclame AQUI, ele enxerga padrões de reputação que nenhuma IA genérica consegue ver.</p>
+          <p class="lede">O Descubra com IA mostra onde agir para melhorar a reputação da sua empresa. Ele roda em cima dos dados do próprio Reclame AQUI, por isso encontra padrões que uma IA genérica, sem essa base, não teria como ver.</p>
           <div class="ctas">
             <a href="#interesse" class="tds-button tds-button--default tds-button--lg">Quero conhecer primeiro</a>
             <a href="#como-funciona" class="tds-button tds-button--secondary tds-button--lg">Ver como funciona</a>
@@ -375,8 +375,7 @@
       </div>
 
       <div class="stat-strip">
-        <div class="stat"><div class="num">3 min</div><div class="lbl">o que levava 3h no Excel, agora em minutos</div></div>
-        <div class="stat"><div class="num">3s</div><div class="lbl">para a IA dar o primeiro sinal de resposta</div></div>
+        <div class="stat"><div class="num">Minutos</div><div class="lbl">o que levava horas no Excel, agora em minutos</div></div>
         <div class="stat"><div class="num">1 clique</div><div class="lbl">do insight ao slide pronto para a diretoria</div></div>
         <div class="stat"><div class="num">+25 anos</div><div class="lbl">de dados proprietários do Reclame AQUI</div></div>
       </div>
@@ -387,8 +386,8 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <span class="tds-caption eyebrow">O ponto de virada</span>
-        <h2>Você lidera CX com evidência — ou ainda exporta base pro Excel?</h2>
+        <span class="tds-caption eyebrow">Da planilha pro insight</span>
+        <h2>Você lidera CX com evidência ou ainda com a base exportada pro Excel?</h2>
         <p class="lead">Hoje, líderes de CX e reputação precisam ser parceiros estratégicos do negócio, mas gastam horas cruzando planilhas para enxergar o que está acontecendo. O Descubra com IA muda esse jogo.</p>
       </div>
     </div>
@@ -408,21 +407,21 @@
           <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
           <span class="adv-tag">Chega de planilha</span>
           <h3>Do dado cru ao insight em segundos</h3>
-          <p>Pergunte "como está a reputação deste mês?" e a IA lê seus dados, cruza as reclamações e responde. Sem exportar base, sem manipular Excel ou Power BI para enxergar o que importa.</p>
+          <p>Pergunte "como está a reputação deste mês?" e a IA lê seus dados, cruza as reclamações e responde. Sem precisar exportar base ou abrir o Power BI.</p>
         </article>
 
         <article class="tds-card tds-card--hovered adv-card">
           <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
           <span class="adv-tag">Previsibilidade</span>
           <h3>Saiba o que fazer hoje pra bater a meta</h3>
-          <p>Cenários claros do mês vigente, não retrovisores de 6 meses. A IA projeta a tendência dos problemas e avisa se eles vão derrubar sua nota — com tempo para você agir.</p>
+          <p>Cenários claros do mês vigente, não retrovisores de 6 meses. A IA projeta a tendência dos problemas e avisa com antecedência se eles vão derrubar sua nota.</p>
         </article>
 
         <article class="tds-card tds-card--hovered adv-card">
           <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2Z"/><path d="M9 21h6"/></svg></div>
           <span class="adv-tag">Causa-raiz automática</span>
           <h3>A IA encontra a origem da reclamação</h3>
-          <p>Sem depender de classificação manual. O sistema identifica a causa-raiz, isola região ou parceiro afetado e detecta anomalias — como instabilidades de produto ou ataques em massa.</p>
+          <p>Sem depender de classificação manual. O sistema identifica a causa-raiz, isola região ou parceiro afetado e sinaliza anomalias, por exemplo uma instabilidade de produto ou um pico atípico de reclamações.</p>
         </article>
 
         <article class="tds-card tds-card--hovered adv-card">
@@ -441,14 +440,14 @@
       <div class="section-head">
         <span class="tds-caption eyebrow">Como funciona</span>
         <h2>Três passos entre a dúvida e a ação.</h2>
-        <p class="lead">Uma interface híbrida: resumo analítico da IA sempre acompanhado de gráficos dinâmicos — nunca só texto.</p>
+        <p class="lead">Uma interface híbrida: resumo analítico da IA sempre acompanhado de gráficos dinâmicos, nunca só texto.</p>
       </div>
 
       <div class="steps">
         <div class="step">
           <div class="step-n">1</div>
           <h3>Pergunte em linguagem natural</h3>
-          <p>Digite ou escolha uma sugestão pronta — "como está a performance do time esta semana?". Se faltar contexto, a IA pergunta o período em vez de inventar resposta.</p>
+          <p>Digite sua pergunta ou escolha uma sugestão pronta, como "como está a performance do time esta semana?". Se faltar contexto, a IA pergunta o período em vez de inventar resposta.</p>
         </div>
         <div class="step">
           <div class="step-n">2</div>
@@ -469,15 +468,15 @@
     <div class="container">
       <div class="moat">
         <div>
-          <span class="tds-caption eyebrow">O ativo que ninguém copia</span>
+          <span class="tds-caption eyebrow">O que só o Reclame AQUI tem</span>
           <p class="moat-quote">Inteligência que <em>só o Reclame AQUI</em> pode dar.</p>
-          <p>Dados proprietários de reputação, acumulados em mais de 25 anos, combinados com IA. É uma vantagem que nenhuma ferramenta genérica de análise consegue replicar — porque nenhuma delas tem acesso à maior base de reputação da América Latina.</p>
+          <p>Dados proprietários de reputação, acumulados em mais de 25 anos, combinados com IA. É uma vantagem que nenhuma ferramenta genérica de análise consegue replicar, porque nenhuma delas tem acesso à maior base de reputação da América Latina.</p>
         </div>
         <ul class="moat-list">
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Padrões de reputação invisíveis para IAs de mercado</li>
-          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Análise sem alucinação, validada por especialistas de dados</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Análises refinadas por especialistas de dados</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Dados sensíveis tratados antes de qualquer processamento</li>
-          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Login único do HugMe — sem atrito, sem nova senha</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Login único do HugMe: não precisa criar outra senha</li>
         </ul>
       </div>
     </div>
@@ -489,7 +488,7 @@
       <div class="section-head">
         <span class="tds-caption eyebrow">Disponibilidade</span>
         <h2>Exclusivo do plano Premium.</h2>
-        <p class="lead">O Descubra com IA é liberado automaticamente para empresas do plano Premium — sem depender de ativação manual do Suporte. Garanta seu interesse antes do lançamento.</p>
+        <p class="lead">O Descubra com IA é liberado automaticamente para empresas do plano Premium, sem passar pelo Suporte. Garanta seu interesse antes do lançamento.</p>
       </div>
 
       <div class="plan-shell">
@@ -582,7 +581,7 @@
       <div class="faq-grid">
         <details class="tds-accordion-item">
           <summary class="tds-accordion-trigger">O que é o Descubra com IA?<svg class="tds-accordion-trigger__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-          <div class="tds-accordion-content">É a inteligência de reputação nativa do HugMe. Você pergunta em linguagem natural e recebe análise, gráficos e próximos passos com base nos dados do próprio Reclame AQUI — sem exportar planilhas.</div>
+          <div class="tds-accordion-content">É a inteligência de reputação nativa do HugMe. Você pergunta em linguagem natural e recebe análise, gráficos e próximos passos com base nos dados do próprio Reclame AQUI. Não precisa exportar planilha.</div>
         </details>
         <details class="tds-accordion-item">
           <summary class="tds-accordion-trigger">Quem pode usar?<svg class="tds-accordion-trigger__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
@@ -602,7 +601,7 @@
         </details>
         <details class="tds-accordion-item">
           <summary class="tds-accordion-trigger">O Descubra com IA está disponível em qualquer plano?<svg class="tds-accordion-trigger__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></summary>
-          <div class="tds-accordion-content">Não. O Descubra com IA será <strong>exclusivo do plano Premium</strong> — liberado automaticamente para empresas desse plano, sem custo adicional de ativação. Estamos em fase de lançamento: deixe seu interesse no formulário acima e o time do HugMe avisa você assim que a funcionalidade for liberada para o seu plano.</div>
+          <div class="tds-accordion-content">Não. O Descubra com IA será <strong>exclusivo do plano Premium</strong>. A liberação é automática para empresas desse plano, sem custo adicional de ativação. Estamos em fase de lançamento: deixe seu interesse no formulário acima e o time do HugMe avisa você assim que a funcionalidade for liberada para o seu plano.</div>
         </details>
       </div>
     </div>
@@ -630,7 +629,7 @@
               <clipPath id="fc1"><rect width="39" height="39" fill="white"/></clipPath>
             </defs>
           </svg>
-          <p>O HugMe é a plataforma de gestão de reputação e atendimento do Reclame AQUI — a maior plataforma de confiança da América Latina.</p>
+          <p>O HugMe é a plataforma de gestão de reputação e atendimento do Reclame AQUI, a maior plataforma de confiança da América Latina.</p>
         </div>
         <div>
           <h4>Descubra com IA</h4>
