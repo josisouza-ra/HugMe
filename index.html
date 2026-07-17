@@ -276,12 +276,12 @@
   .capture-text .tick { flex-shrink:0; width: 22px; height: 22px; border-radius: 50%; background: var(--primary-600); color: var(--color-white); display:flex; align-items:center; justify-content:center; }
   .capture-text .tick svg { width: 13px; height: 13px; }
 
-  .capture-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 36px; border: 1px solid var(--color-slate-200); box-shadow: var(--shadow-xl); display: flex; flex-direction: column; gap: 16px; }
+  .capture-card { background: var(--color-white); border-radius: var(--radius-xl); padding: 36px; border: 1px solid var(--color-slate-200); box-shadow: var(--shadow-xl); display: flex; flex-direction: column; gap: 24px; }
   .capture-card h3 { font-size: var(--text-2xl); font-weight: var(--font-weight-bold); color: var(--primary-900); letter-spacing: -0.01em; }
-  .capture-card .cc-sub { font-size: var(--text-sm); color: var(--color-slate-600); margin-top: -6px; }
-  .capture-card .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .capture-card .legal { font-size: var(--text-xs); color: var(--color-slate-500); line-height: 1.5; margin-top: 2px; }
-  .capture-card .submit-btn { width: 100%; margin-top: 4px; }
+  .capture-card .cc-sub { font-size: var(--text-sm); color: var(--color-slate-600); margin-top: -14px; }
+  .capture-card .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .capture-card .legal { font-size: var(--text-xs); color: var(--color-slate-500); line-height: 1.5; }
+  .capture-card .submit-btn { width: 100%; margin-top: 8px; }
   .form-success { display: none; text-align: center; padding: 24px 8px; }
   .form-success .fs-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--primary-600); color: var(--color-white); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
   .form-success .fs-icon svg { width: 28px; height: 28px; }
@@ -536,7 +536,7 @@
             <p class="cc-sub">Leva menos de 1 minuto. Sem compromisso.</p>
             <input type="hidden" id="f-origem" name="origem" value="direto" />
 
-            <div class="form-row" style="margin-top:4px">
+            <div class="form-row">
               <div class="tds-input-field">
                 <label class="tds-label" for="f-nome">Nome <span class="tds-label__required" aria-hidden="true">*</span></label>
                 <input class="tds-input" id="f-nome" name="nome" type="text" placeholder="Seu nome completo" required autocomplete="name" />
@@ -547,15 +547,9 @@
               </div>
             </div>
 
-            <div class="form-row">
-              <div class="tds-input-field">
-                <label class="tds-label" for="f-telefone">Telefone <span class="tds-label__required" aria-hidden="true">*</span></label>
-                <input class="tds-input" id="f-telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" required autocomplete="tel" inputmode="tel" />
-              </div>
-              <div class="tds-input-field">
-                <label class="tds-label" for="f-email">E-mail <span class="tds-label__required" aria-hidden="true">*</span></label>
-                <input class="tds-input" id="f-email" name="email" type="email" placeholder="voce@empresa.com" required autocomplete="email" />
-              </div>
+            <div class="tds-input-field">
+              <label class="tds-label" for="f-telefone">Telefone <span class="tds-label__required" aria-hidden="true">*</span></label>
+              <input class="tds-input" id="f-telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" required autocomplete="tel" inputmode="tel" />
             </div>
 
             <p id="form-error" class="tds-input-help tds-input-help--error" role="alert" style="display:none; margin-top:-6px;"></p>
@@ -687,19 +681,16 @@
       const nome = form.nome.value.trim();
       const empresa = form.empresa.value.trim();
       const telefone = form.telefone.value.trim();
-      const email = form.email.value.trim();
       const origem = form.origem.value;
 
-      if (!nome || !empresa || !telefone || !email) {
+      if (!nome || !empresa || !telefone) {
         return showError("Por favor, preencha todos os campos.");
       }
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!emailOk) return showError("Digite um e-mail válido.");
 
       submitBtn.disabled = true;
       submitBtn.textContent = "Enviando…";
 
-      const payload = new URLSearchParams({ nome, empresa, telefone, email, origem });
+      const payload = new URLSearchParams({ nome, empresa, telefone, origem });
 
       try {
         if (SHEETS_ENDPOINT && !SHEETS_ENDPOINT.startsWith("COLE_AQUI")) {
