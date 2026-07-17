@@ -537,9 +537,15 @@
               </div>
             </div>
 
-            <div class="tds-input-field">
-              <label class="tds-label" for="f-telefone">Telefone <span class="tds-label__required" aria-hidden="true">*</span></label>
-              <input class="tds-input" id="f-telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" required autocomplete="tel" inputmode="tel" />
+            <div class="form-row">
+              <div class="tds-input-field">
+                <label class="tds-label" for="f-telefone">Telefone <span class="tds-label__required" aria-hidden="true">*</span></label>
+                <input class="tds-input" id="f-telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" required autocomplete="tel" inputmode="tel" />
+              </div>
+              <div class="tds-input-field">
+                <label class="tds-label" for="f-email">E-mail <span class="tds-label__required" aria-hidden="true">*</span></label>
+                <input class="tds-input" id="f-email" name="email" type="email" placeholder="voce@empresa.com" required autocomplete="email" />
+              </div>
             </div>
 
             <p id="form-error" class="tds-input-help tds-input-help--error" role="alert" style="display:none; margin-top:-6px;"></p>
@@ -671,16 +677,19 @@
       const nome = form.nome.value.trim();
       const empresa = form.empresa.value.trim();
       const telefone = form.telefone.value.trim();
+      const email = form.email.value.trim();
       const origem = form.origem.value;
 
-      if (!nome || !empresa || !telefone) {
+      if (!nome || !empresa || !telefone || !email) {
         return showError("Por favor, preencha todos os campos.");
       }
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!emailOk) return showError("Digite um e-mail válido.");
 
       submitBtn.disabled = true;
       submitBtn.textContent = "Enviando…";
 
-      const payload = new URLSearchParams({ nome, empresa, telefone, origem });
+      const payload = new URLSearchParams({ nome, empresa, telefone, email, origem });
 
       try {
         if (SHEETS_ENDPOINT && !SHEETS_ENDPOINT.startsWith("COLE_AQUI")) {
